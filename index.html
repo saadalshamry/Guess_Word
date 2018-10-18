@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video Games Hanged Man</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body class="bg-light">
+    <!-- main container -->
+    <div class="container bg-light mt-5">
+        <!-- header -->
+        <header class="row bg-danger">
+            <i class="fas fa-gamepad fa-9x col col-lg-5  text-center text-white"></i>
+            <h1 class="col col-lg-7 text-white">GUESS VIDEO GAME </h1>
+        </header>
+        <!-- /header -->
+
+        <!--play field  -->
+
+        <div class="row">
+            <div class="col col-lg-12 border bg-primary mt-2 p-5" id="audio">
+
+            </div>
+            <!-- player status -->
+            <div class="card col col-lg-3 p-0 mt-5">
+                <div class="card-header">
+                    STATUS
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">WINS: <span id="wins" class="text-success mg-1 font-weight-bold"></span></li>
+                    <li class="list-group-item">GUESSES REMAINING: <span id="remaining" class=" text-danger mg-1 font-weight-bold"></span></li>
+                    <li class="list-group-item">GUESSED LETTERS: <span id="guessed" class=" text-info mg-1 font-weight-bold"></span></li>
+                </ul>
+            </div>
+            <!-- /player status -->
+
+            <!-- word section -->
+            <div class="col col-lg-1">
+            </div>
+            <div class="col col-lg-8 mt-5 bg-light border text-center p-3">
+                <div id="word" class="">
+
+                </div>
+            </div>
+            <!-- /word section -->
+        </div>
+        <!--/play field  -->
+    </div>
+    <!-- /main container -->
+    <!-- js file -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
