@@ -8,8 +8,7 @@ var word = document.getElementById("word"),
   char = [];
 var Game = {
   // words
-  words: [
-    {
+  words: [{
       word: "fortnite",
       image: "",
       audio: "shield.wav"
@@ -58,7 +57,7 @@ var Game = {
   guessed: [],
   // first rendering function
 
-  firstRender: function() {
+  firstRender: function () {
     // reseting
     word.innerHTML = "";
     this.guessed = [];
@@ -76,7 +75,7 @@ var Game = {
     audio.setAttribute("controls", "true");
     document.getElementById("audio").append(audio);
 
-    chars.forEach(function(w) {
+    chars.forEach(function (w) {
       if (w !== " ") {
         word.innerHTML += "-";
       } else {
@@ -91,10 +90,10 @@ var Game = {
     guessed.innerHTML = this.guessed;
   },
   // fn(update)
-  update: function(key) {
+  update: function (key) {
     // updating the word
     var str = "";
-    char.forEach(function(c) {
+    char.forEach(function (c) {
       if (Game.guessed.indexOf(c) !== -1) {
         str += c;
       } else if (c !== key && c !== " ") {
@@ -108,10 +107,14 @@ var Game = {
     word.innerHTML = str;
   },
   // fn(counter) will handle updating player status
-  counter: function() {
+  counter: function () {
     // check if win
     if (word.textContent.indexOf("-") == -1) {
       this.wins++;
+      this.firstRender();
+    }
+
+    if (this.remaining <= 0) {
       this.firstRender();
     }
     // check if passed remaining attempts
@@ -121,7 +124,7 @@ var Game = {
     guessed.innerHTML = this.guessed;
   },
   // fn(play) will handle assets
-  play: function() {}
+  play: function () {}
 };
 
 // calls
@@ -129,7 +132,7 @@ var Game = {
 Game.firstRender();
 
 //update
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", function (e) {
   // getting pressed key
   var key = e.key;
   // if statments
